@@ -58,7 +58,7 @@ class Payment(models.Model):
     paid = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.amount
+        return f"£{self.amount}"
 
 
 class Student(models.Model):
