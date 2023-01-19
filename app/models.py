@@ -58,7 +58,7 @@ class Payment(models.Model):
     paid = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.code
+        return f"{self.amount} for {self.student.user.username}"
 
 
 class Student(models.Model):
