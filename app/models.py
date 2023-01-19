@@ -54,7 +54,7 @@ class Course(models.Model):
 
 class Payment(models.Model):
     amount = models.DecimalField(max_digits=6, decimal_places=2)
-    student = models.ForeignKey('User', default=None, on_delete=models.CASCADE, null=True)
+    student = models.ForeignKey(User, default=None, on_delete=models.CASCADE, null=True)
     paid = models.BooleanField(default=False)
 
 
