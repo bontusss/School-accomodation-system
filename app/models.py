@@ -38,6 +38,9 @@ class Landlord(models.Model):
     hostel = models.ForeignKey('Hostel', default=None, null=True, on_delete=models.CASCADE)
     phone = models.CharField(max_length=15, null=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Course(models.Model):
     # if a student has enrollment number iit2017001 then the course code is iit2017
