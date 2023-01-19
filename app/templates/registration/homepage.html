@@ -1,0 +1,22 @@
+{% extends 'registration/base.html' %} 
+{% block content %}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-centered">
+        <h1 class="mt-5 mb-3">Login Success!</h1>
+        <p>FirstName: {{first_name}}</p>
+        <p>LastName: {{last_name}}</p>
+        <p>Enrollment_No: {{e_no}}</p>
+        <p>Room allotted: {{ra}}</p>
+        <p>Room Type: {{rn}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-centered mt-3">
+        <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} 
