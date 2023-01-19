@@ -33,6 +33,12 @@ class Hostel(models.Model):
         return self.name
 
 
+class Landlord(models.Model):
+    name = models.CharField(max_length=100, null=True)
+    hostel = models.ForeignKey('Hostel', default=None, null=True, on_delete=models.CASCADE)
+    phone = models.CharField(max_length=15, null=True)
+
+
 class Course(models.Model):
     # if a student has enrollment number iit2017001 then the course code is iit2017
     code = models.CharField(max_length=100, default=None)
