@@ -52,6 +52,12 @@ class Course(models.Model):
         return self.code
 
 
+class Payment(models.Model):
+    amount = models.DecimalField(max_digits=6, decimal_places=2)
+    student = models.ForeignKey('User', default=None, on_delete=models.CASCADE, null=True)
+    paid = models.BooleanField(default=False)
+
+
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     gender_choices = [('M', 'Male'), ('F', 'Female')]
