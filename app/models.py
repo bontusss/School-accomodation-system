@@ -57,6 +57,9 @@ class Payment(models.Model):
     student = models.ForeignKey(User, default=None, on_delete=models.CASCADE, null=True)
     paid = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.code
+
 
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
